@@ -1,0 +1,22 @@
+{
+	"name": "lille-bitte/framework-extension",
+	"description": "Framework extension.",
+	"type": "library",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Paulus Gandung Prakosa",
+			"email": "rvn.plvhx@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"LilleBitte\\Extension\\FrameworkExtension\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"LilleBitte\\Extension\\FrameworkExtension\\Tests\\": "tests/"
+		}
+	}
+}
