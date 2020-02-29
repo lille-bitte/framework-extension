@@ -23,10 +23,10 @@ class FrameworkExtension extends Extension
 	 */
 	public function build(ContainerBuilderInterface $container)
 	{
-		$container->addCompilerPass(new Pass\EmitterPass());
-		$container->addCompilerPass(new Pass\RequestPass());
-		$container->addCompilerPass(new Pass\ResponsePass());
-		$container->addCompilerPass(new Pass\RouterFactoryPass());
+		$container->addCompilerPass(new EmitterPass());
+		$container->addCompilerPass(new RequestPass());
+		$container->addCompilerPass(new ResponsePass());
+		$container->addCompilerPass(new RouterFactoryPass());
 	}
 
 	/**
