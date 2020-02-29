@@ -44,4 +44,15 @@ class FrameworkExtension extends Extension
 	{
 		return;
 	}
+
+	/**
+     * {@inheritdoc}
+     */
+	public function getAnnotationClasses()
+    {
+        return [
+            Route::class,
+            Method::class
+        ];
+    }
 }
