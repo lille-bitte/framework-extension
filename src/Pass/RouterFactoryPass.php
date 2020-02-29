@@ -13,35 +13,35 @@ use LilleBitte\Routing\RouterFactory;
  */
 class RouterFactoryPass implements CompilerPassInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function __invoke(ContainerBuilderInterface $container)
-	{
-		$container->instance($this->getTag(), RouterFactory::getRouter());
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function __invoke(ContainerBuilderInterface $container)
+    {
+        $container->instance($this->getTag(), RouterFactory::getRouter());
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTag()
-	{
-		return 'extension.framework.router_factory';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTag()
+    {
+        return 'extension.framework.router_factory';
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getAssociatedClass()
-	{
-		return RouterFactory::class;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssociatedClass()
+    {
+        return RouterFactory::class;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getSerializedValue()
-	{
-		return 'RouterFactory::getRouter()';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getSerializedValue()
+    {
+        return 'RouterFactory::getRouter()';
+    }
 }

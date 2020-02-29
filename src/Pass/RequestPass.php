@@ -13,35 +13,35 @@ use LilleBitte\Messenger\Request;
  */
 class RequestPass implements CompilerPassInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function __invoke(ContainerBuilderInterface $container)
-	{
-		$container->instance($this->getTag(), new Request());
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function __invoke(ContainerBuilderInterface $container)
+    {
+        $container->instance($this->getTag(), new Request());
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTag()
-	{
-		return 'extension.framework.request';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTag()
+    {
+        return 'extension.framework.request';
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getAssociatedClass()
-	{
-		return Request::class;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssociatedClass()
+    {
+        return Request::class;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getSerializedValue()
-	{
-		return 'new Request()';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getSerializedValue()
+    {
+        return 'new Request()';
+    }
 }

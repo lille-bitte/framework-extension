@@ -13,35 +13,35 @@ use LilleBitte\Messenger\Response;
  */
 class ResponsePass implements CompilerPassInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function __invoke(ContainerBuilderInterface $container)
-	{
-		$container->instance($this->getTag(), new Response());
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function __invoke(ContainerBuilderInterface $container)
+    {
+        $container->instance($this->getTag(), new Response());
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getTag()
-	{
-		return 'extension.framework.response';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getTag()
+    {
+        return 'extension.framework.response';
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getAssociatedClass()
-	{
-		return Response::class;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssociatedClass()
+    {
+        return Response::class;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getSerializedValue()
-	{
-		return 'new Response()';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getSerializedValue()
+    {
+        return 'new Response()';
+    }
 }

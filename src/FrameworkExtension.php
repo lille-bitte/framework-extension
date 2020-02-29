@@ -18,37 +18,37 @@ use LilleBitte\Routing\Annotation\Method;
  */
 class FrameworkExtension extends Extension
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function build(ContainerBuilderInterface $container)
-	{
-		$container->addCompilerPass(new EmitterPass());
-		$container->addCompilerPass(new RequestPass());
-		$container->addCompilerPass(new ResponsePass());
-		$container->addCompilerPass(new RouterFactoryPass());
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function boot()
-	{
-		return;
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function terminate()
-	{
-		return;
-	}
-
-	/**
+    /**
      * {@inheritdoc}
      */
-	public function getAnnotationClasses()
+    public function build(ContainerBuilderInterface $container)
+    {
+        $container->addCompilerPass(new EmitterPass());
+        $container->addCompilerPass(new RequestPass());
+        $container->addCompilerPass(new ResponsePass());
+        $container->addCompilerPass(new RouterFactoryPass());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function boot()
+    {
+        return;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function terminate()
+    {
+        return;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAnnotationClasses()
     {
         return [
             Route::class,
